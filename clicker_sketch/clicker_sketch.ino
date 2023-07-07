@@ -226,25 +226,7 @@ void loop() {
       }
     }
 
-    if (action == '6') {  // mouse.moveTo 6,x,y
-      data.remove(0, 2);  // Remove the action identifier (6,) from the data string
-      int commaIndex1 = data.indexOf(',');
-      if (commaIndex1 != -1) {
-        String xString = data.substring(0, commaIndex1);
-        String yString = data.substring(commaIndex1 + 1);
-
-        Serial.println(xString);
-        Serial.println(yString);
-
-        int xTarget = xString.toInt();
-        int yTarget = yString.toInt();
-
-        Mouse.move(xTarget, yTarget, 100);
-        delay(100);
-      }
-    }
-
-    if (action == '7') {  // mouse.humanMoveTo 7,x,y,numSteps,minDelay,maxDelay,minControlDistance,maxControlDistance,offset
+    if (action == '6') {  // mouse.humanMoveTo 6,x,y,numSteps,minDelay,maxDelay,minControlDistance,maxControlDistance,offset
       data.remove(0, 2);  // Remove the action identifier (7,) from the data string
 
       int commaIndex1 = data.indexOf(',');
