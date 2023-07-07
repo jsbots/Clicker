@@ -43,5 +43,5 @@ CSV data it accepts:
 6, x, y, numSteps, minDelay, maxDelay, minControlDistance, maxControlDistance, offset
 ```
 
-*minControlDistance, maxControlDistance and offset are responsible for deviation of the movement.*
+*minControlDistance, maxControlDistance and offset are responsible for deviation of the movement. Delay values are applied to every numStep, with these 2 values and numStep number you can define the speed.*
 
