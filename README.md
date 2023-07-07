@@ -1,4 +1,6 @@
-Pretty crude sketch that was written in a couple of hours mostly by ChatGPT with some small tweaks from my side.
+Pretty crude sketch that was written in a couple of hours with ChatGPT.
+
+Delay is randomly chosen from min and max values, if you need a static delay just send two same values. 
 
 CSV data it accepts:
 
