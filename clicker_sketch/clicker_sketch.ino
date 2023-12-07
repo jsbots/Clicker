@@ -233,9 +233,6 @@ void loop() {
         String xString = data.substring(0, commaIndex1);
         String yString = data.substring(commaIndex1 + 1);
 
-        Serial.println(xString);
-        Serial.println(yString);
-
         int xTarget = xString.toInt();
         int yTarget = yString.toInt();
 
