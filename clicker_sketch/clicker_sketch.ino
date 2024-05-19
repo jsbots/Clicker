@@ -275,6 +275,23 @@ void loop() {
       }
     }
 
+   if (action == '8') {  // scroll 8,direction,steps && indices[1] != -1
+     data.remove(0, 2);  // Remove the action identifier (8,) from the data string
+
+     int commaIndex1 = data.indexOf(',');
+     int commaIndex2 = data.indexOf(',', commaIndex1 + 1);
+
+     int direction = data.substring(0, commaIndex1).toInt();
+     int steps = data.substring(commaIndex1 + 1, commaIndex2).toInt();
+
+     int scrollValue = direction == 0 ? -1 : 1;
+
+     for (int i = 0; i < steps; i++) {
+       Mouse.move(0, 0, scrollValue);
+       delay(random(50, 150));
+     }
+   }
+
     Serial.print("ready");
   }
 }
